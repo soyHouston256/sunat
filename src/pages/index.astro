@@ -1282,11 +1282,15 @@ async function downloadSlide(){
       windowWidth: W,
       windowHeight: H,
     });
-    const url = canvas.toDataURL('image/png');
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `sunat-wrapped-slide-${idx+1}.png`;
-    a.click();
+    canvas.toBlob(blob => {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `sunat-wrapped-slide-${idx+1}.png`;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 150);
+    }, 'image/png');
     btn.innerHTML = '✅ ¡Guardada!';
     setTimeout(()=>{ btn.disabled=false; btn.innerHTML='<span class="dl-icon">📥</span> Guardar imagen'; }, 2000);
   } catch(e){
@@ -1658,11 +1662,15 @@ async function downloadPNG(){
       useCORS: true,
       logging: false,
     });
-    const url = canvas.toDataURL('image/png');
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'mi-sunat-wrapped-2025.png';
-    a.click();
+    canvas.toBlob(blob => {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'mi-sunat-wrapped-2025.png';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 150);
+    }, 'image/png');
     btn.textContent = '✅ ¡Imagen descargada!';
     setTimeout(()=>{btn.disabled=false;btn.innerHTML='📱 Descargar imagen para WhatsApp';},2500);
   } catch(e) {
@@ -1693,7 +1701,7 @@ function downloadCard(){
 </style></head><body><div class="card">${card.innerHTML}</div></body></html>`;
   const blob=new Blob([html],{type:'text/html'});
   const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');a.href=url;a.download='mi-sunat-wrapped-2025.html';a.click();URL.revokeObjectURL(url);
+  const a=document.createElement('a');a.href=url;a.download='mi-sunat-wrapped-2025.html';document.body.appendChild(a);a.click();setTimeout(()=>{document.body.removeChild(a);URL.revokeObjectURL(url);},150);
 }
 
 const loadMsgs=[
