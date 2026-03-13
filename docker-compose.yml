@@ -1,0 +1,11 @@
+services:
+  sunat:
+    build: .
+    container_name: sunat
+    restart: unless-stopped
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true
