@@ -794,7 +794,7 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text-dim);borde
   <button class="yape-fab-btn" onclick="toggleFab()" title="Yápeame si te sirvió">💜</button>
 </div>
 
-<script>
+<script is:inline>
 const $ = id => document.getElementById(id);
 const fmtSol = n => 'S/ ' + n.toLocaleString('es-PE',{minimumFractionDigits:2,maximumFractionDigits:2});
 let _uploadStartTime = Date.now();
