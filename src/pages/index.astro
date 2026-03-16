@@ -1247,6 +1247,14 @@ document.addEventListener('touchend',e=>{
   if(Math.abs(dx)>40){ dx<0?nextStory():prevStory(); }
 });
 
+// keyboard navigation
+document.addEventListener('keydown',e=>{
+  if($('storiesScreen').style.display!=='flex') return;
+  if(e.key==='ArrowRight'||e.key==='ArrowDown') nextStory();
+  else if(e.key==='ArrowLeft'||e.key==='ArrowUp') prevStory();
+  else if(e.key==='Escape') $('storiesScreen').style.display='none';
+});
+
 // ── CONFETTI ──
 function launchConfetti(){
   const canvas=$('confettiCanvas');
