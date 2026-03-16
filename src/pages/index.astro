@@ -49,8 +49,8 @@ nav{position:relative;z-index:10;padding:1.25rem 2rem;display:flex;align-items:c
 .fmt{font-size:11px;font-weight:700;letter-spacing:0.05em;padding:3px 10px;border-radius:20px;border:1px solid var(--border);color:var(--text-muted);}
 .privacy-note{margin-top:1.5rem;font-size:12px;color:var(--text-dim);}
 .privacy-note strong{color:var(--p3);}
-.profiles-preview{display:flex;gap:12px;margin-top:3rem;flex-wrap:wrap;justify-content:center;}
-.preview-pill{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:30px;padding:8px 16px;font-size:13px;animation:slideIn 0.5s both;}
+.profiles-preview{display:flex;gap:8px;margin-top:3rem;flex-wrap:wrap;justify-content:center;padding:0 1rem;}
+.preview-pill{display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:30px;padding:7px 12px;font-size:12px;animation:slideIn 0.5s both;white-space:nowrap;}
 .preview-pill:nth-child(2){animation-delay:.1s;}.preview-pill:nth-child(3){animation-delay:.2s;}.preview-pill:nth-child(4){animation-delay:.3s;}
 @keyframes slideIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
 
@@ -505,7 +505,7 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text-dim);borde
 }
 .escalinata-pct{font-size:12px;color:var(--oro-inca);text-align:right;margin-top:4px;font-family:var(--font-display);font-weight:700;}
 
-/* Story slide andean overrides */
+/* Story slide andean overrides (kept for compat) */
 .story-slide.bg-inca-1{background:linear-gradient(160deg,#1A0800 0%,#3D1800 40%,#2C1200 70%,#0A0A0F 100%);}
 .story-slide.bg-inca-2{background:linear-gradient(160deg,#100800 0%,#2A1400 40%,#1A0A00 70%,#0A0A0F 100%);}
 .story-slide.bg-inca-3{background:linear-gradient(160deg,#0A0015 0%,#200030 40%,#140020 70%,#0A0A0F 100%);}
@@ -513,6 +513,54 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text-dim);borde
 .story-slide.bg-inca-5{background:linear-gradient(160deg,#200000 0%,#500010 40%,#300008 70%,#0A0A0F 100%);}
 .story-slide.bg-inca-6{background:linear-gradient(160deg,#1A1200 0%,#4A3000 40%,#2A1C00 70%,#0A0A0F 100%);}
 .story-slide.bg-inca-7{background:linear-gradient(160deg,#0A0A0F 0%,#1A1A2E 50%,#0A0A0F 100%);}
+
+/* ── RECAP VIBRANT BACKGROUNDS ── */
+/* Paleta institucional SUNAT: navy + dorado */
+.story-slide.bg-w1{background:linear-gradient(160deg,#001245 0%,#003087 45%,#001A57 100%);}
+.story-slide.bg-w2{background:linear-gradient(160deg,#000D2A 0%,#002060 45%,#001840 100%);}
+.story-slide.bg-w3{background:linear-gradient(160deg,#001230 0%,#0033A0 45%,#001F6A 100%);}
+.story-slide.bg-w4{background:linear-gradient(160deg,#001218 0%,#003850 45%,#001A2C 100%);}
+.story-slide.bg-w5{background:linear-gradient(160deg,#080020 0%,#1A0050 45%,#00102A 100%);}
+
+/* ── RECAP CARD COMPONENTS ── */
+.w-branding{font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.12em;color:rgba(255,255,255,0.55);text-align:center;text-transform:uppercase;margin-bottom:0.75rem;display:flex;align-items:center;justify-content:center;gap:6px;}
+.w-branding b{background:linear-gradient(90deg,#FF6B35,#FFD23F);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:14px;}
+.w-slide-title{font-family:var(--font-display);font-size:clamp(1.5rem,5.5vw,2.4rem);font-weight:800;color:#fff;line-height:1.1;text-align:center;margin:0 0 0.4rem;text-shadow:0 2px 16px rgba(0,0,0,0.5);}
+.w-slide-sub{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-align:center;margin-bottom:0.75rem;}
+.w-card{background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.28);border-radius:18px;padding:0.85rem 1.1rem;width:100%;max-width:310px;margin:0 auto;backdrop-filter:blur(10px);}
+.w-card-title{font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.5rem;text-align:center;}
+.w-big-num{font-family:var(--font-display);font-size:clamp(2rem,9vw,3.2rem);font-weight:800;color:#FFD23F;text-align:center;line-height:1.05;text-shadow:0 2px 20px rgba(255,210,63,0.45);}
+/* Rank list */
+.w-rank-item{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+.w-rank-item:last-child{border-bottom:none;}
+.w-rank-num{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#FFD23F,#FF6B35);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:12px;font-weight:800;color:#000;flex-shrink:0;}
+.w-rank-name{flex:1;font-size:12px;font-weight:600;color:#fff;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.w-rank-detail{font-size:11px;color:rgba(255,255,255,0.55);white-space:nowrap;}
+/* DOW chart */
+.w-dow-chart{width:100%;display:flex;align-items:flex-end;gap:3px;height:52px;margin:6px 0 2px;}
+.w-dow-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;}
+.w-dow-bar{width:100%;border-radius:3px 3px 0 0;background:rgba(255,255,255,0.2);min-height:4px;}
+.w-dow-bar.peak{background:linear-gradient(180deg,#FFD23F,#FF6B35);}
+.w-dow-label{font-size:8px;color:rgba(255,255,255,0.45);text-align:center;}
+.w-peak-badge{font-family:var(--font-display);font-size:12px;font-weight:700;color:#FFD23F;text-align:center;margin-bottom:2px;}
+/* Deductions list */
+.w-ded-item{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+.w-ded-item:last-child{border-bottom:none;}
+.w-ded-num{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;}
+.w-ded-name{flex:1;font-size:12px;color:rgba(255,255,255,0.85);text-align:left;}
+.w-ded-amt{font-family:var(--font-display);font-size:13px;font-weight:700;color:#FFD23F;}
+.w-ded-total{margin-top:7px;padding:7px 10px;border-radius:10px;background:rgba(255,210,63,0.12);border:1px solid rgba(255,210,63,0.4);display:flex;justify-content:space-between;align-items:center;}
+/* Month chart */
+.w-month-chart{width:100%;display:flex;align-items:flex-end;gap:3px;height:72px;margin-bottom:4px;}
+.w-month-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;position:relative;}
+.w-month-bar{width:100%;border-radius:3px 3px 0 0;min-height:4px;}
+.w-month-crown{position:absolute;top:-16px;font-size:11px;text-align:center;width:100%;}
+.w-month-label{font-size:7px;color:rgba(255,255,255,0.4);text-align:center;}
+.w-month-peak-text{margin-top:6px;padding:7px 12px;border-radius:10px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);font-size:12px;color:rgba(255,255,255,0.85);text-align:center;width:100%;max-width:300px;}
+/* Decorative stars */
+.w-star{position:absolute;pointer-events:none;font-size:18px;opacity:0.55;}
+/* IGV footer note */
+.w-footer-note{font-size:10px;color:rgba(255,255,255,0.38);text-align:center;margin-top:6px;letter-spacing:0.04em;}
 
 /* Gold rain canvas */
 #goldRainCanvas{position:absolute;inset:0;pointer-events:none;z-index:0;}
@@ -588,7 +636,7 @@ footer{text-align:center;padding:2rem;font-size:12px;color:var(--text-dim);borde
 <div class="easter-toast" id="easterToast"></div>
 
 <nav>
-  <div><div class="logo">SUNAT WRAPPED</div><div class="logo-sub">tu año en boletas 🇵🇪</div></div>
+  <div><div class="logo">SUNAT RECAP</div><div class="logo-sub">tu año en boletas 🇵🇪</div></div>
   <div class="year-badge">2025</div>
 </nav>
 
@@ -982,110 +1030,219 @@ const STORY_DURATION = 6000;
 
 function buildStorySlides(d){
   const meses=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-  const maxMes = d.monthBase.indexOf(Math.max(...d.monthBase));
-  const topLugar = Object.entries(d.lugarMap).sort((a,b)=>b[1]-a[1])[0];
-  const profile = PROFILES.find(p=>p.match(d)) || PROFILES[5];
-  const earnedAchs = ACHIEVEMENTS.filter(a=>a.check(d));
-  const avg = 8500;
-  const pctVsNac = Math.min(99, Math.round(data.totalBase / avg * 100));
-  const tuTicket = d.totalBase / d.totalCount;
-  const mesesActivos = d.monthBase.filter(v=>v>0).length;
+  const mesesFull=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const dowLabels=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
 
-  const pctVsNacShow = Math.min(99, Math.round(d.totalBase/8500*100));
-  const pctLabel = pctVsNacShow > 80
-    ? `Top ${100 - Math.min(95, pctVsNacShow)}%`
-    : pctVsNacShow > 50 ? 'Por encima del promedio' : 'Gasto moderado';
+  const maxMes = d.monthBase.indexOf(Math.max(...d.monthBase));
+  const dowBase = d.dowBase || Array(7).fill(0);
+  const maxDow = dowBase.indexOf(Math.max(...dowBase));
+  const dowMaxCount = dowBase[maxDow] || 0;
+
+  // Top providers by count (boletas), fallback to amount
+  const topByCount = Object.entries(d.lugarCountMap||{}).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  const topByAmt   = Object.entries(d.lugarMap).sort((a,b)=>b[1]-a[1]);
+  const topProviders = topByCount.length >= 1 ? topByCount : topByAmt.slice(0,5).map(([n])=>[n,d.lugarCountMap?.[n]||1]);
+
+  // Categories sorted by amount
+  const catsSorted = Object.entries(d.catMap).sort((a,b)=>b[1]-a[1]);
+
+  // IGV estimate (18/118 of base)
+  const igv = Math.round(d.totalBase * 0.1525);
+
+  // Deductible %
+  const dedPct = d.totalBase > 0 ? Math.min(100, Math.round(d.totalDed / d.totalBase * 100)) : 0;
+  const gastoPct = 100 - dedPct;
+
+  // User info
+  const userName = (d.userName||'').trim();
+  const userRuc  = (d.userRuc||'').trim();
+
+  // ── Month bar chart ──
+  const maxMonthVal = Math.max(...d.monthBase, 1);
+  const barColors = ['#FF6B35','#4FC3F7','#06D6A0','#FFD23F','#B388FF','#FF6B9D','#FF6B35','#4FC3F7','#06D6A0','#FFD23F','#B388FF','#FF6B9D'];
+  const monthBars = d.monthBase.map((v,i)=>{
+    const h = Math.max(6, Math.round(v/maxMonthVal*66));
+    const isPeak = i===maxMes;
+    return `<div class="w-month-bar-wrap">
+      ${isPeak?'<div class="w-month-crown">👑</div>':''}
+      <div class="w-month-bar" style="height:${h}px;background:${isPeak?'linear-gradient(180deg,#FFD23F,#FF6B35)':barColors[i]+'88'};"></div>
+      <div class="w-month-label">${meses[i]}</div>
+    </div>`;
+  }).join('');
+
+  // ── DOW bar chart ──
+  const maxDowVal = Math.max(...dowBase, 1);
+  const dowBars = dowBase.map((v,i)=>{
+    const h = Math.max(4, Math.round(v/maxDowVal*46));
+    const isPeak = i===maxDow;
+    return `<div class="w-dow-bar-wrap">
+      <div class="w-dow-bar${isPeak?' peak':''}" style="height:${h}px;"></div>
+      <div class="w-dow-label">${dowLabels[i]}</div>
+    </div>`;
+  }).join('');
+
+  // ── Donut SVG ──
+  const R=52, CX=70, CY=70;
+  const circ = 2*Math.PI*R;
+  const dedDash = (dedPct/100)*circ;
+  const donutSVG=`<svg viewBox="0 0 140 140" width="120" height="120">
+    <circle cx="${CX}" cy="${CY}" r="${R}" fill="none" stroke="rgba(255,107,53,0.45)" stroke-width="18"/>
+    <circle cx="${CX}" cy="${CY}" r="${R}" fill="none" stroke="#FFD23F" stroke-width="18"
+      stroke-dasharray="${dedDash.toFixed(1)} ${(circ-dedDash).toFixed(1)}"
+      transform="rotate(-90 ${CX} ${CY})"/>
+  </svg>`;
+
+  // ── Branding header ──
+  const branding=`<div class="w-branding">TU <b>SUNAT</b> RECAP 2025 🇵🇪</div>`;
+
+  // ── 4 Rubros SUNAT (Slide 1) ──
+  const SUNAT_RUBROS = [
+    { id:'rest', name:'Hoteles y\nRestaurantes', pct:15, emoji:'🍽️', color:'#CC5200', bg:'rgba(204,82,0,0.3)' },
+    { id:'serv', name:'Servicios\nProfesionales', pct:30, emoji:'💼', color:'#7B1FA2', bg:'rgba(123,31,162,0.3)' },
+    { id:'alq',  name:'Alquiler\nInmuebles',      pct:30, emoji:'🏠', color:'#2E7D32', bg:'rgba(46,125,50,0.3)' },
+    { id:'ess',  name:'EsSalud\nTrab. Hogar',     pct:100,emoji:'🏥', color:'#0277BD', bg:'rgba(2,119,189,0.3)' },
+  ];
+  const rm = d.rubroMap || {rest:0,serv:0,alq:0,ess:0};
+  const rubroData = SUNAT_RUBROS.map(r=>({ ...r, total: rm[r.id]||0 }));
+  const topRubro = [...rubroData].sort((a,b)=>b.total-a.total)[0];
+  const topRubroDeducible = topRubro.total * (topRubro.pct/100);
+
+  const rubroBoxes = rubroData.map(r=>{
+    const isTop = r.name === topRubro.name && r.total > 0;
+    return `<div style="
+      border-radius:14px;padding:11px 8px;text-align:center;position:relative;
+      background:${isTop ? r.bg.replace('0.3','0.5') : 'rgba(255,255,255,0.06)'};
+      border:${isTop ? '2px solid '+r.color : '1px solid rgba(255,255,255,0.1)'};
+    ">
+      ${isTop ? '<div style="position:absolute;top:-9px;left:50%;transform:translateX(-50%);font-size:13px;line-height:1;">👑</div>' : ''}
+      <div style="font-size:26px;margin-bottom:4px;">${r.emoji}</div>
+      <div style="font-size:9px;font-weight:700;color:${isTop?'#fff':'rgba(255,255,255,0.45)'};line-height:1.25;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">${r.name.replace('\n','<br>')}</div>
+      <div style="font-family:var(--font-display);font-size:12px;font-weight:800;color:${r.total>0?'#FFD23F':'rgba(255,255,255,0.2)'};">${r.total>0?fmtSol(r.total):'—'}</div>
+      <div style="font-size:8px;margin-top:3px;color:${isTop?r.color:'rgba(255,255,255,0.3)'};font-weight:700;">Deduce ${r.pct}%</div>
+    </div>`;
+  }).join('');
 
   return [
-    // Slide 1 — Intro dramático (andean)
-    `<div class="story-slide bg-inca-1" data-idx="0">
-      <div class="s-eyebrow">SUNAT Wrapped · 2025 🇵🇪</div>
-      <div class="s-emoji">☀️</div>
-      <div class="s-big">El Sol<br><span class="grad">vio todo.</span></div>
-      <div class="s-sub">Cada boleta, cada sol gastado.<br>Esta es tu historia del 2025.</div>
-      <div class="s-note" style="color:rgba(212,160,23,0.6);font-size:12px;margin-top:1.5rem;">✦ Toca para continuar ✦</div>
-    </div>`,
-
-    // Slide 2 — Total gastado + lluvia dorada
-    `<div class="story-slide bg-inca-2" data-idx="1" style="position:relative;overflow:hidden;">
-      <canvas id="goldRainCanvas"></canvas>
-      <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;">
-        <div class="s-eyebrow">El número que importa</div>
-        <div class="s-emoji">💰</div>
-        <div class="s-big"><span class="grad" id="counterTotal" data-target="${d.totalBase.toFixed(0)}">S/ 0</span></div>
-        <div class="s-sub">En <strong>${d.totalCount}</strong> salidas durante todo el 2025.</div>
-        <div class="sunat-card">
-          <div class="sunat-card-logo">SUNAT · COMPROBANTE ELECTRÓNICO</div>
-          <div class="sunat-card-val" style="color:var(--oro-light);">${fmtK(d.totalDed)}</div>
-          <div class="sunat-card-lbl">soles deducibles · ¡puedes recuperarlos! 💰</div>
+    // ── SLIDE 1: Rubros SUNAT ──
+    `<div class="story-slide bg-w1" data-idx="0" style="justify-content:flex-start;padding-top:52px;">
+      <span class="w-star" style="top:17%;left:7%;">✦</span>
+      <span class="w-star" style="bottom:20%;right:7%;font-size:14px;">★</span>
+      ${branding}
+      <div class="w-slide-title">TUS RUBROS<br>SUNAT 2025</div>
+      <div style="width:100%;max-width:310px;margin:0.6rem auto 0;display:flex;flex-direction:column;gap:8px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;">
+          ${rubroBoxes}
         </div>
-        <div class="s-note">El 30% de tus gastos en restaurantes cuenta.</div>
+        <div class="w-card" style="border-color:rgba(201,162,39,0.5);background:rgba(0,20,80,0.5);padding:9px 14px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+            <span style="font-size:12px;color:rgba(255,255,255,0.7);">💰 Puedes recuperar</span>
+            <span style="font-family:var(--font-display);font-size:17px;font-weight:800;color:#FFD23F;white-space:nowrap;">${fmtSol(topRubroDeducible)}</span>
+          </div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.38);margin-top:3px;">${topRubro.pct}% de tu gasto en ${topRubro.name.replace('\n',' ')}</div>
+        </div>
+        ${userName?`<div class="w-card" style="padding:8px 14px;border-color:rgba(255,255,255,0.15);background:rgba(0,15,60,0.4);">
+          <div style="font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.03em;">${userName}</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.4);">RUC: ${userRuc||'—'}</div>
+        </div>`:''}
       </div>
     </div>`,
 
-    // Slide 3 — Mes más gastador
-    `<div class="story-slide bg-inca-3" data-idx="2">
-      <div class="s-eyebrow">Tu mes más intenso</div>
-      <div class="s-emoji">📅</div>
-      <div class="s-big"><span class="grad3">${meses[maxMes]}</span></div>
-      <div class="s-sub">Tu mes más gastador: <strong>${fmtSol(d.monthBase[maxMes])}</strong> en un solo mes.</div>
-      ${maxMes===11?'<div class="s-note">Diciembre... el mes en que el presupuesto es un meme.</div>':
-        maxMes===3?'<div class="s-note">Abril — Semana Santa, feriados y ganas de salir. Clásico.</div>':
-        maxMes===6?'<div class="s-note">Julio — Fiestas Patrias 🎉 Peruano de corazón.</div>':
-        maxMes===4?'<div class="s-note">Mayo — ¿Día de la Madre o simplemente viviste bien?</div>':
-        '<div class="s-note">Ese mes algo especial pasó. La billetera lo recuerda.</div>'}
+    // ── SLIDE 2: Resumen tributariolizado ──
+    `<div class="story-slide bg-w2" data-idx="1" style="justify-content:flex-start;padding-top:52px;">
+      <span class="w-star" style="top:17%;left:7%;">✦</span>
+      <span class="w-star" style="bottom:20%;right:7%;font-size:14px;">★</span>
+      ${branding}
+      <div class="w-slide-title">TU RESUMEN<br>TRIBUTARIOLIZADO</div>
+      <div class="w-slide-sub">Tu resumen tributario personalizado</div>
+      <div style="width:100%;max-width:310px;margin:0 auto;display:flex;flex-direction:column;gap:8px;">
+        <div class="w-card" style="padding:0.7rem 1rem;">
+          <div class="w-card-title" style="text-align:left;">TU TOP PROVEEDORES FAVORITOS</div>
+          ${topProviders.map(([nombre,cnt],i)=>`
+            <div class="w-rank-item" style="padding:5px 0;">
+              <div class="w-rank-num" style="width:22px;height:22px;font-size:11px;">${i+1}</div>
+              <div class="w-rank-name" style="font-size:11px;text-align:left;">${nombre.split(' ').slice(0,4).join(' ')}</div>
+              <div class="w-rank-detail" style="font-size:10px;">${cnt} Boleta${cnt!==1?'s':''}</div>
+            </div>`).join('')}
+        </div>
+        <div class="w-card">
+          <div class="w-card-title">DÍA DE GASTO FAVORITO</div>
+          <div class="w-peak-badge">${dowMaxCount} Boleta${dowMaxCount!==1?'s':''} · ${dowLabels[maxDow]}</div>
+          <div class="w-dow-chart">${dowBars}</div>
+        </div>
+      </div>
     </div>`,
 
-    // Slide 4 — Lugar favorito
-    `<div class="story-slide bg-inca-4" data-idx="3">
-      <div class="s-eyebrow">Tu lugar de cabecera</div>
-      <div class="s-emoji">📍</div>
-      <div class="s-big" style="font-size:clamp(1.5rem,5.5vw,2.6rem);"><span class="grad2">${(topLugar?.[0]||'').split(' ').slice(0,3).join(' ')}</span></div>
-      <div class="s-sub">Dejaste <strong style="color:var(--oro-light);">${fmtSol(topLugar?.[1]||0)}</strong> ahí en todo el año.</div>
-      <div class="s-note">Si tuvieras tarjeta de puntos, ya serías VIP platino.</div>
+    // ── SLIDE 3: IGV ──
+    `<div class="story-slide bg-w3" data-idx="2" style="justify-content:flex-start;padding-top:52px;">
+      <span class="w-star" style="top:17%;right:8%;">✦</span>
+      <span class="w-star" style="bottom:22%;left:7%;font-size:14px;">★</span>
+      ${branding}
+      <div class="w-slide-title">TOTAL IMPUESTOS<br>PAGADOS (IGV)</div>
+      <div style="width:100%;max-width:310px;margin:0 auto;display:flex;flex-direction:column;gap:8px;">
+        <div class="w-card">
+          <div class="w-big-num">${fmtSol(igv)}</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6);text-align:center;margin-top:3px;">Tu contribución al país 🇵🇪</div>
+        </div>
+        <div class="w-card">
+          <div class="w-card-title">DEDUCIBLE vs. GASTO TOTAL</div>
+          <div style="display:flex;align-items:center;gap:14px;justify-content:center;">
+            <div style="position:relative;width:120px;height:120px;flex-shrink:0;">
+              ${donutSVG}
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                <div style="font-family:var(--font-display);font-size:22px;font-weight:800;color:#fff;">${dedPct}%</div>
+                <div style="font-size:9px;color:rgba(255,255,255,0.5);">Deducible</div>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,0.8);">
+                <div style="width:11px;height:11px;border-radius:2px;background:#FFD23F;flex-shrink:0;"></div>
+                <div>${dedPct}%<br><span style="font-size:10px;color:rgba(255,255,255,0.45);">Deducible</span></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,0.8);">
+                <div style="width:11px;height:11px;border-radius:2px;background:rgba(255,107,53,0.65);flex-shrink:0;"></div>
+                <div>${gastoPct}%<br><span style="font-size:10px;color:rgba(255,255,255,0.45);">Gasto</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-footer-note">¡GRACIAS POR TU CONTRIBUCIÓN! TE ESPERA UN GRAN 2026</div>
     </div>`,
 
-    // Slide 5 — Comparativa + Escudo
-    `<div class="story-slide bg-inca-5" data-idx="4">
-      <div class="s-eyebrow">Tú vs. el Perú</div>
-      <div class="escudo-wrap" id="escudoWrap">🛡️</div>
-      <div class="s-big" style="font-size:clamp(1.8rem,7vw,3.2rem);">
-        <span class="${pctVsNacShow > 50 ? 'grad' : 'grad2'}">${pctLabel}</span>
+    // ── SLIDE 4: Deducciones fiscales ──
+    `<div class="story-slide bg-w4" data-idx="3" style="justify-content:flex-start;padding-top:52px;">
+      <span class="w-star" style="top:17%;left:7%;">✦</span>
+      <span class="w-star" style="bottom:20%;right:7%;font-size:14px;">★</span>
+      ${branding}
+      <div class="w-slide-title">TUS DEDUCCIONES<br>FISCALES</div>
+      <div style="font-size:42px;margin:2px 0 6px;text-align:center;">✅</div>
+      <div class="w-card" style="max-width:310px;">
+        <div class="w-card-title" style="text-align:left;">TUS CATEGORÍAS PRINCIPALES</div>
+        ${catsSorted.slice(0,3).filter(c=>c[1]>0).map(([n,v],i)=>`
+          <div class="w-ded-item">
+            <div class="w-ded-num">${i+1}</div>
+            <div class="w-ded-name">${n}</div>
+            <div class="w-ded-amt">${fmtSol(v)}</div>
+          </div>`).join('')}
+        <div class="w-ded-total">
+          <span style="font-size:12px;color:rgba(255,255,255,0.7);">Total Deducible:</span>
+          <span style="font-family:var(--font-display);font-size:15px;font-weight:800;color:#FFD23F;">${fmtSol(d.totalDed)}</span>
+        </div>
       </div>
-      <div class="s-sub">
-        ${pctVsNacShow > 80
-          ? `Estás en el top de gastadores. La SUNAT te tiene en su lista VIP de boletas.`
-          : pctVsNacShow > 50
-          ? `Gastas más que el peruano promedio. La SUNAT ya sabe tu nombre.`
-          : `Gastas de forma consciente. La SUNAT apenas recuerda tu RUC — y eso no es malo.`}
-      </div>
-      <div class="comp-bar-wrap">
-        <div class="comp-labels"><span>S/0</span><span style="color:var(--oro-inca);">Promedio</span><span>Top</span></div>
-        <div class="comp-bar-track"><div class="comp-bar-fill" id="storyCompBar" style="width:0%;background:linear-gradient(90deg,var(--oro-inca),var(--oro-light));"></div></div>
-        <div class="comp-you" style="color:var(--oro-inca);">Tú → ${fmtSol(d.totalBase/12)} /mes promedio</div>
-      </div>
-      <div class="s-note">Estimados de contribuyentes activos con boletas 2025.</div>
     </div>`,
 
-    // Slide 6 — Perfil + roast
-    `<div class="story-slide bg-inca-6" data-idx="5">
-      <div class="s-eyebrow">Tu perfil de gastador</div>
-      <div class="s-emoji go">${profile.emoji}</div>
-      <div class="s-big"><span class="grad">${profile.title}</span></div>
-      <div class="s-sub" style="font-style:italic;color:rgba(255,255,255,0.55);">${profile.roast(d)}</div>
-    </div>`,
-
-    // Slide 7 — Logros + CTA
-    `<div class="story-slide bg-inca-7" data-idx="6">
-      <div class="s-eyebrow">Logros desbloqueados ✦</div>
-      <div class="s-big" style="font-size:2rem;"><span class="grad">${earnedAchs.length}/${ACHIEVEMENTS.length}</span> <span style="color:rgba(255,255,255,0.6);font-size:1.4rem;">trofeos</span></div>
-      <div class="mini-achievements">
-        ${ACHIEVEMENTS.map(a=>{
-          const e=a.check(d);
-          return `<div class="mini-ach ${e?'earned':''}"><span>${a.emoji}</span><span style="font-size:12px;color:${e?'#D4A017':'rgba(255,255,255,0.3)'}">${a.name}</span></div>`;
-        }).join('')}
+    // ── SLIDE 5: Mejores meses fiscales ──
+    `<div class="story-slide bg-w5" data-idx="4" style="justify-content:flex-start;padding-top:52px;">
+      <span class="w-star" style="top:17%;right:8%;">✦</span>
+      <span class="w-star" style="bottom:22%;left:7%;font-size:14px;">★</span>
+      ${branding}
+      <div class="w-slide-title">TUS MEJORES<br>MESES FISCALES</div>
+      <div class="w-card" style="max-width:310px;margin:0.5rem auto 0;">
+        <div class="w-card-title">GASTO MENSUAL 2025</div>
+        <div style="font-family:var(--font-display);font-size:18px;font-weight:800;color:#FFD23F;text-align:center;margin-bottom:4px;">${fmtSol(d.monthBase[maxMes])}</div>
+        <div class="w-month-chart">${monthBars}</div>
+        <div class="w-month-peak-text">${mesesFull[maxMes]}: Tu mes más productivo fiscalmente</div>
       </div>
-      <button class="story-cta" style="background:linear-gradient(90deg,var(--oro-inca),var(--oro-light));color:#1A0800;" onclick="closeStories()">Ver análisis completo →</button>
     </div>`,
   ];
 }
@@ -1094,13 +1251,11 @@ function buildStorySlides(d){
 // ── SLIDE CANVAS DEFINITIONS ──
 // Each entry: { bg: css-gradient, render: fn(ctx, W, H, d) }
 const SLIDE_BG = [
-  'linear-gradient(160deg,#1A0A00,#3D1400,#0A0A0F)',
-  'linear-gradient(160deg,#000D1A,#003A5C,#0A0A0F)',
-  'linear-gradient(160deg,#0A001A,#2D0050,#0A0A0F)',
-  'linear-gradient(160deg,#001A0D,#00422A,#0A0A0F)',
-  'linear-gradient(160deg,#1A0010,#500030,#0A0A0F)',
-  'linear-gradient(160deg,#1A1000,#4A3000,#0A0A0F)',
-  'linear-gradient(160deg,#0A0A0F,#1A1A2E,#0A0A0F)',
+  'linear-gradient(160deg,#001245,#003087,#001A57)',
+  'linear-gradient(160deg,#000D2A,#002060,#001840)',
+  'linear-gradient(160deg,#001230,#0033A0,#001F6A)',
+  'linear-gradient(160deg,#001218,#003850,#001A2C)',
+  'linear-gradient(160deg,#080020,#1A0050,#00102A)',
 ];
 
 async function downloadSlide(){
@@ -1198,24 +1353,7 @@ function goToStory(idx){
   const em = slides[idx].querySelector('.s-emoji');
   if(em){ em.classList.remove('go'); void em.offsetWidth; em.classList.add('go'); }
 
-  // Stop previous gold rain
   if(stopGoldRain){ stopGoldRain(); stopGoldRain=null; }
-
-  setTimeout(()=>{
-    // Slide 2 — counter + gold rain
-    if(idx===1){
-      const el = $('counterTotal');
-      if(el) animateCounter(el, el.dataset.target);
-      stopGoldRain = startGoldRain('goldRainCanvas');
-    }
-    // Slide 5 — escudo + comp bar
-    if(idx===4){
-      const bar = $('storyCompBar');
-      if(bar) bar.style.width = Math.min(90, Math.round(storyData.totalBase/8500*60))+'%';
-      const esc = $('escudoWrap');
-      if(esc){ esc.classList.remove('go'); void esc.offsetWidth; esc.classList.add('go'); }
-    }
-  }, 350);
 
   // progress bars
   for(let i=0;i<n;i++){
@@ -1290,31 +1428,61 @@ function destroyCharts(){charts.forEach(c=>c.destroy());charts=[];}
 let data = null;
 function buildDashboard(rows){
   const meses=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-  const monthBase=Array(12).fill(0), dayBase=Array(31).fill(0);
-  const lugarMap={}, catMap={};
+  const monthBase=Array(12).fill(0), dayBase=Array(31).fill(0), dowBase=Array(7).fill(0);
+  const lugarMap={}, lugarCountMap={}, catMap={};
+  const rubroMap={'rest':0,'serv':0,'alq':0,'ess':0};
   let totalBase=0, totalDed=0, totalCount=0, maxTicket=0, minTicket=Infinity;
+  let userName='', userRuc='';
+
+  function tipoToRubro(tipo){
+    const t=(tipo||'').toUpperCase().trim();
+    if(t==='HOTEL O RESTAURANTE') return 'rest';
+    if(t==='SERVICIO PROFESIONAL') return 'serv';
+    if(t==='ARRENDAMIENTO') return 'alq';
+    return 'ess'; // todo lo demás
+  }
+
+  // try to extract user info from first row
+  if(rows.length){
+    const r0=rows[0];
+    const nameKeys=Object.keys(r0).filter(k=>k.toUpperCase().includes('ADQUIRIENTE')||k.toUpperCase().includes('ADQUIRENTE'));
+    const rucKeys=Object.keys(r0).filter(k=>k.toUpperCase().includes('RUC')&&(k.toUpperCase().includes('ADQUIR')||k.toUpperCase().includes('USUARIO')));
+    if(nameKeys.length) userName=(r0[nameKeys.find(k=>!k.toUpperCase().includes('RUC'))]??'').toString().trim();
+    if(rucKeys.length) userRuc=(r0[rucKeys[0]]??'').toString().trim();
+  }
 
   rows.forEach(r=>{
     const base=parseMoney(r['MONTO BASE DE DEDUCCION EN SOLES']);
     const ded=parseMoney(r['MONTO DEDUCIBLE EN SOLES']);
     const fecha=(r['FECHA DE COMPROBANTE']??'').toString();
     const nombre=(r['NOMBRE o RAZON SOCIAL']??'').toString().trim();
+    const tipoGasto=(r['TIPO DE GASTO']??r['DESCRIPCION']??'').toString().trim();
     if(ded>0) totalDed+=ded;
     if(!base) return;
     totalBase+=base; totalCount++;
     if(base>maxTicket) maxTicket=base;
     if(base<minTicket) minTicket=base;
+    rubroMap[tipoToRubro(tipoGasto)]+=base;
     if(fecha.includes('/')){
-      const m=parseInt(fecha.split('/')[1])-1;
-      const d=parseInt(fecha.split('/')[0])-1;
+      const parts=fecha.split('/');
+      const m=parseInt(parts[1])-1;
+      const d=parseInt(parts[0])-1;
       if(m>=0&&m<12) monthBase[m]+=base;
       if(d>=0&&d<31) dayBase[d]+=base;
+      if(parts.length===3){
+        const dt=new Date(parseInt(parts[2]),parseInt(parts[1])-1,parseInt(parts[0]));
+        const dw=dt.getDay();
+        if(!isNaN(dw)) dowBase[dw]++;
+      }
     }
-    if(nombre) lugarMap[nombre]=(lugarMap[nombre]||0)+base;
+    if(nombre){
+      lugarMap[nombre]=(lugarMap[nombre]||0)+base;
+      lugarCountMap[nombre]=(lugarCountMap[nombre]||0)+1;
+    }
     catMap[cat(nombre)]=(catMap[cat(nombre)]||0)+base;
   });
 
-  data = {totalBase,totalDed,totalCount,monthBase,dayBase,lugarMap,catMap,maxTicket,minTicket,_fastUpload:(Date.now()-_uploadStartTime)<10000};
+  data = {totalBase,totalDed,totalCount,monthBase,dayBase,dowBase,lugarMap,lugarCountMap,catMap,rubroMap,maxTicket,minTicket,userName,userRuc,_fastUpload:(Date.now()-_uploadStartTime)<10000};
   storyData = data;
   checkEasterEggs(data);
 
@@ -1444,7 +1612,7 @@ function buildDashboard(rows){
 
   function renderShareCard(){
     $('shareCardInner').innerHTML=`
-      <div class="sc-year">☀️ SUNAT WRAPPED · 2025 · PERÚ</div>
+      <div class="sc-year">☀️ SUNAT RECAP · 2025 · PERÚ</div>
       <div class="sc-emoji">${profile.emoji}</div>
       <div class="sc-title">${profile.title}</div>
       <div class="sc-sub">${profile.subtitle}</div>
@@ -1499,7 +1667,7 @@ async function downloadPNG(){
   `;
   wrapper.innerHTML = `
     <div style="text-align:center;">
-      <div style="font-size:13px;letter-spacing:.15em;color:rgba(255,255,255,0.35);margin-bottom:16px;font-family:'DM Sans',sans-serif;">SUNAT WRAPPED · 2025 🇵🇪</div>
+      <div style="font-size:13px;letter-spacing:.15em;color:rgba(255,255,255,0.35);margin-bottom:16px;font-family:'DM Sans',sans-serif;">SUNAT RECAP · 2025 🇵🇪</div>
       <div style="font-size:96px;margin-bottom:16px;line-height:1;">${card.querySelector('.sc-emoji').textContent}</div>
       <div style="font-size:36px;font-weight:800;margin-bottom:8px;background:linear-gradient(90deg,#FF6B35,#FFD23F);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">${card.querySelector('.sc-title').textContent}</div>
       <div style="font-size:16px;color:rgba(255,255,255,0.5);margin-bottom:32px;font-style:italic;font-family:'DM Sans',sans-serif;">${card.querySelector('.sc-sub').textContent}</div>
